@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📚 Library Book Finder | Search by Title</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="library-container">
+      <header>
+        <h1>📖 Library Explorer</h1>
+        <p>
+          Search for a book by title — discover author, year, publisher & more
+        </p>
+      </header>
+      <div class="search-section">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Type book title... e.g. '1984', 'The Hobbit'"
+            autocomplete="off"
+          />
+          <button id="searchBtn">Search Book</button>
+        </div>
+        <p class="hint">
+          ✨ Try: "gatsby", "mockingbird", "alchemist" (case insensitive,
+          partial match)
+        </p>
+      </div>
+      <div id="resultsContainer" class="results-container">
+        <div class="info-placeholder">
+          <span
+            >📌 Enter a title above & click search to see book details.</span
+          >
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
