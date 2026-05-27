@@ -22,7 +22,7 @@
             placeholder="🔍 Type book title... e.g. '1984', 'The Hobbit'"
             autocomplete="off"
           />
-          <button id="searchBtn">Search Book</button>
+          <button id="searchBtn">Search by Title</button>
         </div>
         <p class="hint">
           ✨ Try: "gatsby", "mockingbird", "alchemist" (case insensitive,
@@ -36,6 +36,48 @@
           >
         </div>
       </div>
+
+      <div class="search-section">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="searchInputByGenre"
+            placeholder="🔍 Type book Genre... e.g. 'Tragedy', 'Dystopian Fiction'"
+            autocomplete="off"
+          />
+          <button id="searchByGenre">Search By Genre</button>
+        </div>
+        <p class="hint">
+          ✨ Try: "Southern Gothic", "Tragedy", "Adventure Fiction" (case
+          insensitive, partial match)
+        </p>
+      </div>
+      <div id="resultsContainerByGenre" class="results-container">
+        <div class="info-placeholder">
+          <span
+            >📌 Enter a Genre above & click search to see book details.</span
+          >
+        </div>
+      </div>
+
+      <div class="search-section">
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="searchInputByPages"
+            placeholder="🔍 Type book pages'"
+            autocomplete="off"
+          />
+          <button id="searchBtnByPages">Search by Pages</button>
+        </div>
+        <p class="hint">✨ Try: "100", "200", "300"</p>
+      </div>
+      <div id="resultsContainerByPages" class="results-container">
+        <div class="info-placeholder">
+          <span
+            >📌 Enter a Pages above & click search to see book details.</span
+          >
+        </div>
     </div>
     <script src="script.js"></script>
   </body>

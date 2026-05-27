@@ -83,6 +83,41 @@ header p {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
+#searchInputByGenre {
+  flex: 3;
+  min-width: 200px;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid #e2e8f0;
+  border-radius: 60px;
+  background: #fefefe;
+  transition: 0.2s;
+  outline: none;
+}
+
+#searchInputByGenre:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+#searchInputByPages {
+  flex: 3;
+  min-width: 200px;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid #e2e8f0;
+  border-radius: 60px;
+  background: #fefefe;
+  transition: 0.2s;
+  outline: none;
+}
+
+#searchInputByPages:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
 #searchBtn {
   background: #1e2a3e;
   color: white;
@@ -99,6 +134,46 @@ header p {
 }
 
 #searchBtn:hover {
+  background: #0f172a;
+  transform: scale(0.97);
+}
+
+#searchByGenre {
+  background: #1e2a3e;
+  color: white;
+  border: none;
+  padding: 0 1.8rem;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#searchByGenre:hover {
+  background: #0f172a;
+  transform: scale(0.97);
+}
+
+#searchBtnByPages {
+  background: #1e2a3e;
+  color: white;
+  border: none;
+  padding: 0 1.8rem;
+  border-radius: 60px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+#searchBtnByPages:hover {
   background: #0f172a;
   transform: scale(0.97);
 }
