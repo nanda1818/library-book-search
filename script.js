@@ -248,6 +248,10 @@ function handleSearchByPages() {
             <div class="detail-item"><strong>🎭 Genre:</strong> ${book.genre}</div>
             <div class="detail-item"><strong>📄 Pages:</strong> ${book.pages}</div>
           </div>
+          <div class="action-buttons">
+            <button onclick="editBook(${i})" style="background: #4CAF50; color: white; border: none; padding: 6px 12px; cursor: pointer; border-radius: 3px; margin-right: 5px;">Edit</button>
+            <button onclick="deleteBook(${i})" style="background: #f44336; color: white; border: none; padding: 6px 12px; cursor: pointer; border-radius: 3px;">Delete</button>
+          </div>
         </div>
       `;
     }
@@ -263,6 +267,42 @@ function handleSearchByPages() {
     `;
     }
   }
+}
+
+// ============================================
+// BLOCK 8: EDIT & DELETE ACTIONS
+// ============================================
+
+function deleteBook(index) {
+  if (
+    confirm(`Are you sure you want to delete "${libraryBooks[index].title}"?`)
+  ) {
+    libraryBooks.splice(index, 1);
+    handleSearchByPages();
+  }
+}
+
+function editBook(index) {
+  const book = libraryBooks[index];
+
+  const newTitle = prompt("Enter new title:", book.title);
+  if (newTitle === null) return;
+
+  const newAuthor = prompt("Enter new author:", book.author);
+  if (newAuthor === null) return;
+
+  const newPages = parseInt(prompt("Enter new page count:", book.pages), 10);
+  if (isNaN(newPages)) {
+    alert("Invalid page number. Changes not saved.");
+    return;
+  }
+
+  libraryBooks[index].title = newTitle;
+  libraryBooks[index].author = newAuthor;
+  libraryBooks[index].pages = newPages;
+
+  alert("Book updated successfully!");
+  handleSearchByPages();
 }
 
 // ============================================
